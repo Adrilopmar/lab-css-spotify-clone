@@ -14,6 +14,9 @@ body{
 .standard-text{
     text-align: center;
 }
+.standard-section{
+    padding: 5rem 0;
+}
 
 /* ------------------------------------  Header */
 .bg-img{
@@ -45,11 +48,13 @@ body{
     background-color: #fff;
     width: 100%;
     padding: 1rem ;
+    z-index: 1;
+    
 }
 .nav-bar img{
     height: 50px;
     display: flex;
-    margin: auto;
+    margin: auto 0;
 }
 .nav-links>ul{
     list-style: none;
@@ -74,19 +79,26 @@ body{
 .container-offer img{
     width: 120px;
     /* display: flex;
-    margin: auto; */
+    margin: auto; */ 
 }
 .container-offer div{
     width: 40%;
+    height: 300px;
     margin: 2rem 0;
     padding: 1rem;
     text-align: center;
     border: 1px solid #0005;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 /* ------------------------------- west section */ 
 .west-section{
     display: flex;
     background-color: #00B172;
+    
 }
 
 .west-section-info {
@@ -104,4 +116,53 @@ body{
     color: #fff;
     border-bottom: 2px solid #fff;
     padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.west-section-img-container{
+    height: 500px;
+}
+.west-img{
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+.west-absolute-logo{
+    position: absolute;
+    width: 100px;
+    top:47%;
+    left: 47%;
+}
+@media screen and (min-width: 720px){
+    .standard-section{
+        padding: 5rem ;
+    }
+    .container-offer{
+        flex-direction: row;
+    }
+    .container-offer div{
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .west-section-info, .west-section-img-container{
+        width: 40%;
+    }
+    .west-section-info h4, .west-section-info p{
+        width: 80%;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 720px){
+    .west-img,.west-absolute-logo{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 1000px){
+    .west-absolute-logo{
+        display: none;
+    }
+
 }
